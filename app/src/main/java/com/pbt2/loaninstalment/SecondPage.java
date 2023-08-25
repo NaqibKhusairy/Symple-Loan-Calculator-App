@@ -27,14 +27,20 @@ public class SecondPage extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Amount = Double.parseDouble(amount.getText().toString());
-                Interest = Double.parseDouble(interest.getText().toString());
-                Years = Integer.parseInt(year.getText().toString());
-                Intent x = new Intent(getApplicationContext(),ThirdPage.class);
-                x.putExtra("Amount",Amount);
-                x.putExtra("Interest",Interest);
-                x.putExtra("Years",Years);
-                startActivity(x);
+                try{
+                    Amount = Double.parseDouble(amount.getText().toString());
+                    Interest = Double.parseDouble(interest.getText().toString());
+                    Years = Integer.parseInt(year.getText().toString());
+                    Intent x = new Intent(getApplicationContext(), ThirdPage.class);
+                    x.putExtra("Amount", Amount);
+                    x.putExtra("Interest", Interest);
+                    x.putExtra("Years", Years);
+                    startActivity(x);
+                }
+                catch (Exception e) {
+                    errormsg();
+                }
+
             }
         });
 
@@ -46,5 +52,33 @@ public class SecondPage extends AppCompatActivity {
                 year.setText("");
             }
         });
+    }
+    public void errormsg(){
+        if((amount.getText().toString()).isEmpty()&&(interest.getText().toString()).isEmpty()&&(year.getText().toString()).isEmpty()){
+            amount.setError("Please Enter The Loan Amount (RM)");
+            interest.setError("Plase Enter The Interest Rate per Year (%)");
+            year.setError("Pleas Enter How Many Years");
+        }
+        else if((amount.getText().toString()).isEmpty()&&(interest.getText().toString()).isEmpty()){
+            amount.setError("Please Enter The Loan Amount (RM)");
+            interest.setError("Plase Enter The Interest Rate per Year (%)");
+        }
+        else if((interest.getText().toString()).isEmpty()&&(year.getText().toString()).isEmpty()){
+            interest.setError("Plase Enter The Interest Rate per Year (%)");
+            year.setError("Pleas Enter How Many Years");
+        }
+        else if((amount.getText().toString()).isEmpty()&&(year.getText().toString()).isEmpty()){
+            amount.setError("Please Enter The Loan Amount (RM)");
+            year.setError("Pleas Enter How Many Years");
+        }
+        else {
+            if ((amount.getText().toString()).isEmpty()) {
+                amount.setError("Please Enter The Loan Amount (RM)");
+            } else if ((interest.getText().toString()).isEmpty()) {
+                interest.setError("Plase Enter The Interest Rate per Year (%)");
+            } else if ((year.getText().toString()).isEmpty()) {
+                year.setError("Pleas Enter How Many Years");
+            }
+        }
     }
 }

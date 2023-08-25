@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">loaninstalment</string>
+    <string name="loan_calculator">LOAN CALCULATOR</string>
+    <string name="enter">ENTER</string>
+    <string name="todo">TODO</string>
+    <string name="simple_loan_calculator">SIMPLE LOAN CALCULATOR</string>
+    <string name="loan_amount_rm">Loan Amount (RM)</string>
+    <string name="interest_rate_per_year">Interest Rate per Year (%)</string>
+    <string name="how_many_years">How Many Years</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="reset">RESET</string>
+    <string name="result">RESULT</string>
+    <string name="loan_installment_per_month_rm">LOAN INSTALLMENT PER MONTH (RM)</string>
+    <string name="total_interest_for_loan_rm">TOTAL INTEREST FOR LOAN (RM)</string>
+    <string name="back">BACK</string>
 </resources>

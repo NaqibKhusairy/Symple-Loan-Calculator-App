@@ -15,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.247"
-        app:srcCompat="@drawable/loanicon" />
+        app:srcCompat="@drawable/loanicon"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView"
@@ -24,7 +25,7 @@
         android:layout_marginTop="26dp"
         android:layout_marginBottom="288dp"
         android:fontFamily="sans-serif-black"
-        android:text="LOAN CALCULATOR"
+        android:text="@string/loan_calculator"
         android:textAlignment="center"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -40,7 +41,7 @@
         android:backgroundTint="#D5D6D6"
         android:foregroundTint="#000000"
         android:textColor="@color/black"
-        android:text="ENTER"
+        android:text="@string/enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
