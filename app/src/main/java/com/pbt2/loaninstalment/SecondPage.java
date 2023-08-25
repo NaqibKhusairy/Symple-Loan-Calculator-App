@@ -31,7 +31,7 @@ public class SecondPage extends AppCompatActivity {
                 Interest = Double.parseDouble(interest.getText().toString());
                 Years = Integer.parseInt(year.getText().toString());
                 Intent x = new Intent(getApplicationContext(),ThirdPage.class);
-                x.putExtra("Years",Amount);
+                x.putExtra("Amount",Amount);
                 x.putExtra("Interest",Interest);
                 x.putExtra("Years",Years);
                 startActivity(x);
