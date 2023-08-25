@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/loanicon"
-        android:label="@string/app_name"
+        android:label="Loan Instalment"
         android:supportsRtl="true"
         android:theme="@style/Theme.Loaninstalment"
         tools:targetApi="31">
