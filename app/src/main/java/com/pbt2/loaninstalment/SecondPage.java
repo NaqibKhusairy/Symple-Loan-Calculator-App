@@ -2,6 +2,7 @@ package com.pbt2.loaninstalment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,11 @@ public class SecondPage extends AppCompatActivity {
                 Amount = Double.parseDouble(amount.getText().toString());
                 Interest = Double.parseDouble(interest.getText().toString());
                 Years = Integer.parseInt(year.getText().toString());
+                Intent x = new Intent(getApplicationContext(),ThirdPage.class);
+                x.putExtra("Years",Amount);
+                x.putExtra("Interest",Interest);
+                x.putExtra("Years",Years);
+                startActivity(x);
             }
         });
 
