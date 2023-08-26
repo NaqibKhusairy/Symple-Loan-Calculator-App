@@ -26,7 +26,7 @@ public class ThirdPage extends AppCompatActivity {
         totalloan = findViewById(R.id.editTextNumberDecimal2);
         back = findViewById(R.id.button);
         P = getIntent().getDoubleExtra("Amount",0.00);
-        r = getIntent().getDoubleExtra("Interest",0.00);
+        r = getIntent().getDoubleExtra("Interest",0.00000);
         n = getIntent().getIntExtra("Years",0);
 
         r = r / 12 / 100;
